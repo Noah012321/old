@@ -1,0 +1,428 @@
+/*Default inclusive css code (multiple page usage)*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana;
+/*removes white border around page*/
+    margin: 0px;
+}
+/*Our logo wrap/header*/
+header {
+    background-color: #ffd500;
+    text-align: center;
+    width: 100%;
+}
+/*Code for top page image and image-text*/
+.top-image {
+    position: relative;
+}
+
+.image-text {
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+}
+/*Code for scroll button/arrow on header image*/
+.scrollButton {
+    background-color: rgb(255, 255, 255);
+    border: solid px rgb(255, 255, 255);
+    border-radius: 20px;
+    border-width: 3px;
+    bottom: 15%;
+    color: rgb(77, 73, 73);
+    left: 47%;
+    opacity: 0.9;
+    padding: 10px;
+    position: absolute;
+}
+/*Making of the arrow icon*/
+.arrow {
+    border: solid black;
+    border-width: 0 5px 5px 0; /*Makeshift arrow using half a border sliced diagonally*/
+    display: inline-block;
+    padding: 12px;
+    margin: 4px;
+    opacity: 1;
+  }
+  .arrow:hover {
+    border: solid;
+    border-width: 0 4px 4px 0;
+    color: gray;    
+}
+  /*The "sliced" border is then rotated 45 degree to point downwards*/
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+
+/*header with logo aligned in the center using text-align*/
+header {
+    background-color: #ffd500;
+    text-align: center;
+    width: 100%;
+}
+/*Css for navbar*/
+.navbar{
+    width: 100%;
+    background-color: #ffd500;
+    overflow: auto; /*overflow to fill div*/
+    align-items: center;
+    z-index: 1;
+}
+/*min-with 500px will only work for screen larger than 500px, making the sticky attribute non existent for small screens such as phones
+which the sticky will then it could be obstuctive for the article*/
+@media screen and (min-width: 500px) {
+    .navbar {
+        width: 100%;
+        background-color: #ffd500;
+        overflow: auto; /*overflow to fill div*/
+        position: -webkit-sticky; /*for safari*/
+        position: sticky; /*makes navbar sticky for better accessibility*/
+        top: 0;
+    }
+}
+.navbar a {
+      background-color: #ffd500;
+      color: black;
+      float: left;
+      font-size: 18px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-align: center;
+      text-decoration: none; /*Removes the underline from hyperlinkes*/
+      transition: 0.3s;
+      width: 25%;
+  }
+
+/*a:hover highlights what he cursor is hovering*/
+.navbar a:hover {
+    background-color: #d1b62c;
+    border-radius: 5px; 
+    text-shadow: 2px 2px rgb(255, 246, 228) ;
+}
+
+/*active "a" to highlight which site you're currently on*/
+.navbar a.active-home {
+    background-color: #d1b62c;    
+    border-top-right-radius: 5px;/*only used for left navigation bar for a seemless fit to the left side of the page*/
+    font-weight: 600;
+}
+
+.navbar a.active-about {
+    background-color: #d1b62c;    
+    border-top-left-radius: 5px;/*only used for left navigation bar for a seemless fit to the right side of the page*/
+    font-weight: 600;
+}
+
+/*active "a" to highlight which site you're currently on*/
+.navbar a.active {
+    background-color: #d1b62c;    
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/*this css code is for when the website less than 500px, where the nav menu will be displayed vertically*/
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+
+
+/*Css for parent and child divs for article*/
+/*Using a div as a wrapper for .main-container*/
+.wrapper {
+    background-color:rgb(255, 255, 255);
+    height: 100%;
+}
+/*This is a parent div called .main-container*/
+.main-container{
+    height: 100%;
+    margin: auto;
+    line-height: 1.6;
+    justify-content: space-around;
+    padding: 5vw;
+    display: f;
+    width: 70%;
+    display: flex;
+}
+/*We have two child divs one named .mainarticle which is mainly for text and one is named .mainarticle2 which is used for images*/
+.mainarticle{
+    width: 40%;
+}
+
+.mainarticle a:link {
+    text-decoration: none;
+}
+
+.mainarticle a:hover {
+    text-decoration: underline;
+}
+/*By using margin for both top and bottom, the child div with image withh align itself centerted on the vertical axis*/
+.mainarticle2 {
+    width: 40%; 
+    margin-top: auto; 
+    margin-bottom: auto;
+} 
+
+.mainarticle p {
+  word-spacing: 0.2em;
+  line-height: 1.8em;
+}
+
+.mainarticle li {
+   list-style: none;
+}
+
+
+.image-text2  {
+   display: none;
+}
+
+.mainarticle2 p:hover {
+   display: block;
+ 
+}
+
+/*If the page is equal or less than 1200px, the children div will be displayed as block rather than flex for optimal space usage*/
+@media only screen and (max-width: 1200px) {
+    .main-container{
+        display: block;
+        width: 80%;    
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle{
+        width: 100%; 
+        margin: auto;   
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle2 {
+        width: 80%; 
+        margin: auto;   
+    }
+}
+
+
+
+
+/*Footer*/
+/*This is our footer, by using the same technique as parent and child div in .main-container*/
+.outer-footer{
+    background-color:#ffd500;
+}
+
+.footer-container {
+      background-color: #ffd500;
+      display: flex;
+      height: 100%;
+      justify-content: space-around;
+      margin: auto;
+      padding: 20px;
+      width: 70%;
+  }
+/*Footer will be displayed vertically instead of horizontally if screens are smaller than 800px*/
+@media only screen and (max-width: 800px) {
+    .footer-container{
+        display: block;
+    }
+}
+
+.footer-container h1{
+    font-size: 1.6em;
+}
+
+
+.colum {
+   padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Exclusive css for accessibility page*/
+.accessibility-header{
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+      padding-top: 5vw;
+      width: 70%;
+  }
+
+  .accessibility-header h1 {
+      background: rgba(156, 153, 153, 0.7);
+      border: solid rgb(26, 26, 26);
+      border-radius: 10px;
+      padding: 10px;
+  }
+
+.accessibility-images-container {
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      padding-bottom: 10vw;
+      width: 60%;
+  }
+.colum {
+        margin: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        width: 25%;
+  }
+
+.colum h2 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .accessibility-images-container{
+          margin: auto;
+          display: block;
+          width: 80%;
+      }
+  }
+  @media only screen and (max-width: 800px) {
+    .colum{
+          margin: auto;
+          display: block;
+          width: 80%;
+      }
+  }
+
+
+
+/*Max-width attribute will display the content as "block" (vertically) if the website page is smaller than 1200px making it easier to see images and text*/
+/*increased width to make the content bigger and more aethetically pleasing for smaller screens*/
+@media only screen and (max-width: 1200px) {
+    .main-container-accessibilty{
+        display: block;
+        width: 80%;    
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainarticle-accessibility{
+        width: 100%;    
+    }
+}
+
+
+
+.main-container img {
+      border-radius: 5px;
+      transition: transform .2s;
+  }
+.main-container img:hover {
+      transform: scale(1.1);
+     /*(110% zoom) */
+  }
+
+#p32 {
+    width: 100%;
+/*we found out that display: flex could be used to make seamless fit for the space between divs*/
+    display: flex;
+    height: 50vw;
+}
+
+.default-article-img {
+    width: 100%;
+}
+
+.met-logo {
+    width: 100px;
+}
+#p35 {
+   width: 100%;
+   display: flex;
+}
+
+#tech {
+    width: 100%;
+    max-height: 100px;
+}
+
+#p32-close {
+    width: 100%;
+    height: 50vw;
+}
+#map {
+    width: 100%;
+    height: 60vw;
+}
+
+#inside {
+    width: 100%;
+    display: flex;
+}
+#tech {
+    width: 100%;
+    max-height: 370px;
+}
+
+#head-img-topical {
+    width: 100%;
+    height: 50vw;
+}
+#accessibility-img {
+    width: 100%;
+} 
+
+#accessibility_background {
+    width: 100%;
+    max-height: 80%;
+}
+
+.aboutpage-img {
+    width: 100%;
+}
+.social-logo {
+    width: 50px;
+}
+
+#facebook-logo {
+    width: 50px;
+}
+#instagram-logo {
+    width: 50px;
+}
+/**/
+
+
+/*Exclusive css for topical page*/
+
+
+
+
+/*Exclusive css for about page*/
+.secondimage {
+    position: relative;
+}
+
+
+
+
+/*Ha med justerbar skrift for de med dårlig syn
+  Ha med eller skjekk med lyd iforhold til de med disleksy
+  Ha med beskrivende kommentarer
+  Ha med attributter som <nav> og <alt>
+  Ha med forfattern
+  På homepage ta med knapp som dytter deg ned fra bilde*/
+
+  

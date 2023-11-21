@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilestredet 35</title>
+    <link rel="stylesheet" href="../css/index1.css">
+</head>
+<body>
+ <header>
+        <a href="index.html"><img src="../img/oslomet-logo.png" alt="oslomet-logo" class="met-logo"></a>
+ </header>
+    <!--we used div for our navbar-->
+<nav class="navbar">
+        <!-- we gave hyperlink an "active" class , where the current page you're on will have a highlighted "container"-->
+        <a href="index.html">Home</a> 
+        <a class = "active" href="accessibility.html">Accessibility</a> 
+        <a href="topical.html">Topical</a> 
+        <a href="about.html">About</a>
+</nav>
+
+<div class="top-image">
+    <img src="../img/accessibility_background.png" alt="Header image of accessibility page" id="accessibility-img"> <!-- We merged two pictures useing paint.net, first picture; Ben o'bro, Published on December 2, 2016. Second picture;-->
+    <div class = "scrollButton">
+        <a href="#wrapperButtonHome"><i class="arrow down"></i></a> 
+    </div>
+</div>
+
+<!--Main article-->
+<div class="wrapper" id="wrapperButtonHome">
+    <div class="accessibility-header">
+        <h1>The significance of Accessibility on a Webpage</h1>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="main-container">
+            <div class="mainarticle">
+             <h2>Why is accessibility so important for a website?</h2>
+               <p>
+                Web accessibility serves as the cornerstone of an inclusive digital page. It revolves around the idea that every individual, 
+                regardless of their abilities or disabilities, should have unrestricted access to online content. It's not merely a box to check for compliance, 
+                but it's about acknowledging and respecting the diverse needs of users.
+               </p>
+               <p>
+                Firstly, accessibility ensures that people with disabilities can navigate and engage with online content effortlessly. 
+                Whether it's implementing screen reader compatibility for the visually impaired, keyboard navigation for those with motor impairments, 
+                or providing captions for videos aiding the hearing impaired, these features bridge the gap between exclusion and full participation.
+               </p>
+               <p>
+                Moreover, web accessibility extends its benefits beyond the disabled community. Clear, well-structured content and intuitive design, 
+                integral to an accessible website, enhance the user experience for everyone. Think about how descriptive alt text not only assists 
+                visually impaired users but also provides context for images that might not load correctly in various browsers or slow internet connections.
+               </p>
+               <p>
+                The end goal of a well made website is it for not only to be accessible, but userfriendly. This was not something that was easy to do,
+                especially sense we did not use any javascript, we used what we had and i believe we ended with a good result.
+               </p>
+            </div>
+            <div class="mainarticle">
+                <h2>These are the steps we took to make our page more accessible</h2>
+                <h3>HTML and CSS code</h3>
+                  <p>
+                   We added attributes like &lt;alt&gt;. This is a text-alternitive for none-text content, it allows people who can not see, to instead hear the alternative text (which is supposed to be descriptive of the none-text content).
+                   It will also show the alternative text if the none-text content does not load properly.
+                   We added the &lt;tabindex&gt; attribute. This allows people who are not able to use a mouse to navigate the webpage. 
+                   By giving input elements certen &lt;tabindex&gt; values like a hyperlink, the user is then able to use that element with the value of tabs given to that element.
+                   We added “@media screen and (max-width: (x)px) which is a css attribute. It allows us to change the design on the webpage depending on the users screensize.
+                   We have also added smaller details like when you hover over a <a href="">link</a> you can see that the underline does no show
+                   untill the user hovers over the hyperlink. This just makes the user known that he/her can click on the link (commen practice, used on websites like snl and wikepidia).
+                  </p>
+                <h3>Webdesign and layout</h3>
+                  <p>
+                   Website design and layout also heavily effects the accessibility of a webpage. Color contrast is very important.
+                   Color contrast between elements makes the elements more visible. Examples of this are text and background-color which you can see right here,
+                   a white background and black text (This is what we have mostly used through our whole website). 
+                   Our scroll-button has background-color which is in contrast with the color of the arrow,  ligh-grey backround, black arrow. 
+                   We also chose to make our navigation-bar position: fixed; We believe that this raises accessibility because it gives the user the 
+                   opportunity to access any part of the website at any time. We also added (read more) buttons which lessend the lenght
+                   of some of our pages like the "About page". We felt that the page was very lengthy, so we used (read more) boxes to lessen the lengthiness. 
+                  </p>
+                <h3>Responsive design</h3>
+                  <p>
+                    Responsive design is vital part of a website. It allows people who use mobilephones and computers navigate through
+                    the website with the same amount of ease. One of the biggest changes between the computerscreen() and a mobile screen
+                    is that the navigation bar is vertical instead of horizontal.
+                  </p>
+               </div>
+    </div>
+</div>
+<div class="accessibility-header">
+        <h1>These are the accessibility-tests taken for each page: </h1>
+</div>
+</div>
+<div class="accessibility-wrapper">
+    <div class = "accessibility-images-container">
+        <div class = "colum">
+            <h2>Home page</h2>
+            <img src="../img/oslomet-logo-graavegg-2400x1200.jpg" alt="oslomet wall" class="default-article-img">
+        </div>
+        <div class = "colum">
+            <h2>Accessability page</h2>
+            <img src="../img/oslomet-logo-graavegg-2400x1200.jpg" alt="oslomet wall" class="default-article-img">
+        </div>
+        <div class = "colum">
+            <h2>Topical page</h2>
+            <img src="../img/oslomet-logo-graavegg-2400x1200.jpg" alt="oslomet wall" class="default-article-img">
+        </div>
+        <div class = "colum">
+            <h2>About page</h2>
+            <img src="../img/oslomet-logo-graavegg-2400x1200.jpg" alt="oslomet wall" class="default-article-img">
+        </div>
+    </div>
+</div>        
+
+
+
+
+
+<!--
+    Webdesign:
+Colorcontrast “Allows the viewer to easily read text and see elements like our “scroll button””
+Sticky navbar “Allows user to access any part of the website at any time”
+Fontstyle “Use of understandable font so everyone can read”
+Language “Use of wide known language that allows more people to understand the content of the website”
+
+
+
+
+HTML and CSS code:
+<Alt> attribute, a text-alternative to none-text content. The text should be descritive of the image that should be shown.
+@media screen and (max-width: (x)px), allows you to change the design of webpage for specific screensizes.
+Kanskje, 
+a:visited {
+    color:#999999
+} default (common) color that helps the user ————
+Tabindex!!!!!! ——— Allows user to navigate page only using keyboard
+Tittle attribute som vil gi navn når man hovrer over
+
+
+
+
+Responsive designs:
+We had to slighty change webdesing for our accessibility page sence the :hover attribute is not optimal for mobile users
+All text and none-text content 
+Navbar will be shown vertically if the user is using a mobile phone for better fitting
+
+
+(Responsive design kan gå under Webdesign)
+
+Da kan vi eventuelt siste boks være “Ekstra elementer/koder som vi gjerne ville brukt" Og da forklarer andre elementer som lydutspill osv som trenger java
+konklusjon, vi var litt begrenset på kreativiteten uten å bruke java. 
+-->
+
+
+
+
+
+<!--Div for footer-->
+<div class="outer-footer">
+    <div class = "footer-container">
+        <div>
+            <h1>Address</h1>
+            <p>Pilestredet 37-55</p>
+            <p><a href = "https://www.google.no/maps/place/Pilestredet+46,+0167+Oslo/@59.9210891,10.7328447,19z/data=!4m6!3m5!1s0x46416e7913e2a529:0x15d03622a70f16df!8m2!3d59.9210891!4d10.7333919!16s%2Fg%2F11c5mhdh4t?entry=ttu">Oslomet on google maps!</a></p>
+        </div>
+        <div>
+            <h1>Main reception</h1>
+            <p>
+                Phone: 67 23 60 00
+            </p>
+            <p>
+                Opening hours: 08:00 - 15:00 CET
+            </p>
+        </div>
+        <div>
+            <h1>Socials</h1>
+            <p><a href="https://www.facebook.com/oslomet"><img src="../img/Facecbook_Logo3.png" alt="Link til Oslomets facebook" id="facebook-logo"></a></p>
+            <p><a href="https://www.instagram.com/oslomet/"><img src="../img/Instagram_logo1.png" alt="Link til Oslomets Instagram" id="instagram-logo"></a></p>
+        </div>
+    </div>
+</div>                        
+   
+   
+   
+   
+   
+   
+   
+
+
+</body>
+</html>
